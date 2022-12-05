@@ -1,0 +1,26 @@
+<div class="container my-2 py-2">
+    <h2 class="display-4 fw-bold mb-4">Latest Articles
+
+    </h2>
+    
+    <div class="row flex-row-reverse mb-5">
+      <hr>
+      <% for(i=0; i < articles.length; i++) { %> 
+        <div class="col-md-9 p-3">
+          <h2><%= articles[i].title %></h2>
+          <p>
+            <%= articles[i].body.substring(0, 110) %> . . .
+          </p>
+          <a href="/singlePost/<%= articles[i]._id %>" class="btn btn-outline-primary">Read More</a>
+        </div>
+        <div class="col-md-3 p-3">
+          <img src="<%= articles[i].image %>" 
+              class="img-fluid shadow-2 rounded"
+              style="max-height: 160px; width: 100%;"
+              alt="img" />
+        </div>  
+        <hr />
+      <% } %>
+    </div>
+
+  </div>

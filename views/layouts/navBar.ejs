@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <span class="nav-logo">BLI</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <% if(!loggedIn){ %> 
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs">Blogs</a>
+          </li>  
+        <% } %>
+        <!-- Dropdown -->
+        <% if(loggedIn){ %> 
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Options
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="/create">New Blog</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/blogs">Read Blogs</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Learning</a>
+              </li>
+            </ul>
+          </li>  
+        <% } %>
+      </ul>
+      <span class="navbar-text">
+        <% if(!loggedIn) { %> 
+          <a href="/register" class="m-2">Register</a>
+          <a href="/login" class="m-2">Login</a>  
+        <% } %>
+        <% if(loggedIn) { %> 
+          <a href="/logout" class="m-2">Logout</a>  
+        <% } %> 
+      </span>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,23 @@
+<div class="container my-3 py-3">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-12">
+            <h1 class="display-3 mb-4">Register Page</h1>
+            <% if(errors != null && errors.length > 0){ %>
+                <ul class="list-group list-group-light">
+                    <% for(i=0; i < errors.length; i++){ %> 
+                        <li class="list-group-item px-3 border-0 rounded-3 list-group-item-danger mb-2">
+                            <%= errors[i] %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+            <form action="/store/user" enctype="multipart/form-data" method="post">
+                <input type="text" name="username" class="form-control mb-3" value="<%= username %>" placeholder="Username">
+                <input type="password" name="password" class="form-control mb-3" value="<%= password %>" placeholder="Password">
+                <label for="about" class="form-label">About You</label>
+                <textarea name="about" id="about" class="form-control mb-3" rows="10" required spellcheck="true"></textarea>
+                <button type="submit" class="btn btn-primary">register</button> <button type="reset" class="btn btn-warning">clear</button>
+            </form>
+        </div>
+    </div>
+</div>

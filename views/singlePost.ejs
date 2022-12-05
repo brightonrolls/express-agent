@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header') -%>
+  <body>
+    <!-- Start your project here-->
+    <%- include('layouts/navBar') -%>
+
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/blogs">Blogs</a></li>
+              <li class="breadcrumb-item active" aria-current="page"><%= blog.title %></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Tabs content -->
+    <div class="container my-2 py-2">
+      <h1 class="display-3 text-center mt-5 mb-2"><%= blog.title %></h1>
+      <p class="mb-4 text-center">Posted On <%= blog.datePosted.toLocaleString() %>, by <%= blog.userid.username %> </p>
+      <div class="container mt-5">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-md-6 p-2">
+                <p class="text-muted">
+                    <%= blog.body %>
+                  </p>
+                  <div class="text-center mt-5">
+                    <a href="/delete/<%= blog._id %>" class="btn btn-warning">delete post</a>
+                  </div>
+            </div>
+            <div class="col-md-6 p-2">
+                <div class="parallax" 
+                    data-mdb-max-height="250"
+                    data-mdb-delay="2"
+                    data-mdb-image-src="<%= blog.image %>" >
+                </div>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- Tabs content -->
+
+    <%- include('layouts/footer') -%>
+  </body>
+
+  <%- include('layouts/scripts') -%>
+</html>

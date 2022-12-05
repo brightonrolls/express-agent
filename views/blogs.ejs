@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header') -%>
+  <body>
+    <!-- Start your project here-->
+    <%- include('layouts/navBar') -%>
+    <div class="parallax" 
+    data-mdb-max-height="300"
+    data-mdb-delay="2"
+    data-mdb-image-src="https://msl-ltd.co.uk/wp-content/uploads/2016/10/shutterstock_451991974-1.jpg" >
+  
+    </div>
+
+    <!-- Tabs content -->
+    <div class="container-fluid my-3 py-3">
+      <div class="row row-cols-xl-6 justify-content-center align-items-center d-flex mx-auto text-center">
+        <% for(i = 0; i < articles.length; i++) { %> 
+          <div class="card hover-zoom m-2 p-2" style="width: 19rem;">
+            <h3><%= articles[i].title %></h3>
+            <a href="/singlePost/<%= articles[i]._id %>">
+              <img src="<%= articles[i].image %>" style="max-height: 200px; width: 100%;" class="img-fluid" alt="<%= articles[i].title %>">
+            </a>
+          </div>
+        <% } %> 
+      </div>
+    </div>
+    <!-- Tabs content -->
+
+    <%- include('layouts/footer') -%>
+  </body>
+
+  <%- include('layouts/scripts') -%>
+</html>

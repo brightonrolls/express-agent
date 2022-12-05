@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layouts/header') -%>
+  <body>
+    <!-- Start your project here-->
+    <%- include('layouts/navBar') -%>
+    <div class="parallax" 
+    data-mdb-max-height="500"
+    data-mdb-delay="2"
+    data-mdb-image-src="https://baratosoftware.com/dummy/about-us.jpg" >
+    
+    </div>
+
+    <!-- Tabs content -->
+    <div class="container my-5 py-5">
+      <div class="row">
+        <div class="col-md-6 p-2">
+          <h1 class="display-3 fw-bold text-dark">Stephen Brooks</h1>
+          <h2>Insurance Agent</h2>
+          <p class="text-muted mb-3">Licensed in Auto, Home, Life, & Health</p>
+          <p class="lead">
+            First started as a debit agent, selling life policies to the public in residential areas. Started in 2014, door knocking in neighborhoods and meeting existing clients face to face to help with their policies. 
+            I took care of families and their friends for protection against financial loss and uncertainty. There had been a lot of families that lost loved ones without coverage, and it was hard enough without help. It was my job to protect them.
+          </p>
+        </div>
+        <div class="col-md-6 text-center p-2">
+          <div class="sticky-top">
+            <img src="https://www.verisk.com/contentassets/175dcdac1fd6490c9afd8612a873e98a/insurance-agent.jpg" class="img-fluid rounded-circle" alt="img">
+            <br><br>
+            <a href="mailto:stephenbrooks714@gmail.com" class="btn btn-info">Email Me</a>
+            <a href="tel:580-309-0236" class="btn btn-outline-info">Call Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tabs content -->
+    <%- include('layouts/footer') -%>
+  </body>
+
+  <%- include('layouts/scripts') -%>
+</html>
