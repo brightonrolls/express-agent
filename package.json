@@ -4,11 +4,9 @@
   "description": "Insurance Agent sharing quotes and headlines",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "worker": "node index.js",
-    "postinstall": "echo 'Insurance Agent'"
-  },
+       "start": "node index.js",
+       "dev": "nodemon index.js"
+         }
   "keywords": [
     "insurance", 
     "insurance agent", 
